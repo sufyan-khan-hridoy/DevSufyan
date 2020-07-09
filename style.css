@@ -1,0 +1,214 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.all-web{
+    overflow: hidden;
+    width: 100%;
+}
+.wide-layout {
+    background-image: url(img/bg.jpg);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    transform: scale(1.1);
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 50px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.logo {
+    grid-area: 1/2;
+    display: flex;
+    align-items: center;
+}
+.logo h1 {
+    font-family: 'Lobster', cursive;
+    color: white;
+    z-index: 1;
+}
+/* navigation area  */
+.menu {
+    grid-area: 1/-3;
+    overflow: hidden;
+    display: flex;
+    place-self: flex-end;
+    align-items: center;
+
+}
+.menu ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+}
+.nav-menu ul li {
+    display: block;
+    margin: 20px 10px;
+    margin-left: -4px;
+}
+
+/* .nav-menu ul li a:hover{
+    -webkit-filter: blur(0px);
+} */
+.nav-menu ul li a {
+    
+    transition: .2s;
+    position: relative;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 5px 10px;
+    width: 100%;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 5px 5px 15px black;
+}
+
+.nav-menu ul{
+    text-align: center;
+    width: 100%;
+}
+.nav-menu {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    transition: .5s;
+    opacity: 0;
+    transform: scale(100);
+     transform: translateX(100%);
+}
+
+#nav-bar,
+#nav-times {
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+#nav-bar{
+    position: relative;
+    z-index: 100;
+}
+#nav-times{
+    position: absolute;
+    visibility: hidden;
+    
+}
+
+
+ /* all active classes here */
+ .liactive{
+     filter: blur(5px);
+ }
+.nav-active{
+    opacity: 1;
+    transform: scale(1);
+    background: #4527A0;
+    
+}
+.wide-active {
+    filter: blur(10px) !important;
+}
+.nav-times-active {
+    visibility: visible !important;
+    z-index: 100;
+}
+
+.nav-bar-active {
+    visibility: hidden !important;
+}
+/* title area start designing */
+
+.title{
+    position: absolute;
+    top: 50%;
+    left : 50%;
+    z-index: 100;
+    color: white;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    transition: .5s;
+}
+.title h4{
+    font-size: 30px;
+}
+.title h1 {
+    font-size: 50px;
+    margin: 10px 0px;
+}
+.title p {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#learn{
+    border: 2px solid red;
+    border-color: red;
+    background: rgb(202, 0, 0);
+    text-align: center;
+    
+}
+#contact {
+    text-align: center;
+    border: 2px solid white;
+    background: black;
+}
+#learn:hover{
+    background: red;
+    transition: .5s;
+    text-align: center;
+    
+}
+#contact:hover{
+    background: white;
+    color: black;
+    transition: .2s;
+}
+#learn,
+#contact {
+    width: 150px;
+    height: 40px;
+    outline: none;
+    color: white;
+    margin: 10px 10px;
+    cursor: pointer;
+    position: relative;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 0px 15px;
+    transition: .5s;
+}
+#contact i.fa.fa-arrow-right{
+    transform: translate(0px, 0px);
+}
+i.fa.fa-arrow-right {
+    position: absolute;
+    right: 50px;
+    opacity: 0;
+    transition: .5s;
+    transform: translate(7px, 0px);
+}
+button:hover i.fa.fa-arrow-right{
+    right: 15px;
+    opacity: 1;
+}
+
+/* media query for responsiveness */
+
+
